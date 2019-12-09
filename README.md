@@ -1,4 +1,4 @@
-#AGH Elective Subject Clicker
+# AGH Elective Subject Clicker
 
 This app automates the process of choosing your favourite elective subjects.
 
