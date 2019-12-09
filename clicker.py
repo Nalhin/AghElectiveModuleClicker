@@ -3,7 +3,7 @@ import datetime
 import time
 from selenium import webdriver
 
-with open('data.json') as f:
+with open('config.json') as f:
     data = json.load(f)
 
 website = 'https://dziekanat.agh.edu.pl/'
@@ -40,7 +40,7 @@ def select_elective_modules(driver):
 def wait_until_active():
     current_time = datetime.datetime.today()
     hour, minute, second = [int(t) for t in data["time"].split(":")]
-    target_time = datetime.datetime(current_time.year, current_time.month, current_time.day, hour, minute, second+1)
+    target_time = datetime.datetime(current_time.year, current_time.month, current_time.day, hour, minute, second + 1)
     while datetime.datetime.today() < target_time:
         print(datetime.datetime.today())
         time.sleep(1)

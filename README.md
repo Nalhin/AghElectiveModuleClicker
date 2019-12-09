@@ -11,7 +11,7 @@ pip install selenium
 yay -S geckodriver
 ```
 
-You also need to create data.json file with the following structure
+You also need to create config.json file with the following structure
 
 ```json
 {
