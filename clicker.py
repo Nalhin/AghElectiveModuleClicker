@@ -27,8 +27,7 @@ def select_elective_modules(driver):
 
     for module in data["partial_module_names"]:
         elements = driver.find_elements_by_xpath(f"//input[contains(@value,'{module}')]")
-        for element in elements:
-            element.click()
+        elements[1].click()
 
     move_left = driver.find_element_by_xpath("//input[@value='>>>']")
     move_left.click()
@@ -53,6 +52,7 @@ def main():
     driver.get(website + elective_module_suffix)
     wait_until_active()
     select_elective_modules(driver)
+    print(datetime.datetime.today())
 
 
 if __name__ == '__main__':
