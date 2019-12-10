@@ -22,8 +22,10 @@ def login_user(driver):
 
 
 def select_elective_modules(driver):
-    select_buttons = driver.find_elements_by_xpath("//*[text()='Wybór']")
-    select_buttons[1].click()
+    date_element = driver.find_element_by_xpath(f"//*[text()[contains(.,'{data['date']}')]]")
+    parent_elem = date_element.find_element_by_xpath('..')
+    select_button = parent_elem.find_element_by_xpath(".//*[text()='Wybór']")
+    select_button.click()
 
     for module in data["partial_module_names"]:
         elements = driver.find_elements_by_xpath(f"//input[contains(@value,'{module}')]")

@@ -21,7 +21,8 @@ You also need to create config.json file with the following structure.
     "partial_module_name",
     "partial_module_name"
   ],
-  "time": "hour:minute:second"
+  "time": "hour:minute:second", 
+  "date": "11.12.2019"
 }
 ```
 
